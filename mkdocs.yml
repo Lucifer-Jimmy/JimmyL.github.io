@@ -19,10 +19,6 @@ theme:
   #[网站角标]
   #favicon: false
 
-  #[右上角图标]
-  icon:
-    repo: fontawesome/brands/github
-
   #[404页面]
   static_templates:
     - 404.html
@@ -48,7 +44,6 @@ theme:
       toggle:
         icon: material/brightness-4
         name: 切换到浅色模式
-
 
   feature:
     - navigation.instant #自动隐藏
