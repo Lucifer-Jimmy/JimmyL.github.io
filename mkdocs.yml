@@ -19,6 +19,10 @@ theme:
   #[网站角标]
   #favicon: false
 
+  #[右上角图标]
+  icon:
+    repo: fontawesome/brands/github
+
   #[404页面]
   static_templates:
     - 404.html
@@ -44,6 +48,82 @@ theme:
       toggle:
         icon: material/brightness-4
         name: 切换到浅色模式
-
   feature:
-    - navigation.instant #自动隐藏
+    - announce.dismiss
+    #- header.autohide  #[自动隐藏顶部]
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.suggest  #[搜索输入一些字母时推荐补全整个单词]
+    - search.highlight  #[搜索出的文章关键词高亮]
+    - search.share  #[搜索分享按钮]
+    - navigation.expand
+    - navigation.indexes
+    - content.tabs.link
+    - content.tooltips
+    - content.code.copy
+    - content.code.select
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+
+extra:
+  alternate:
+    - name: 简体中文
+      link: /
+      lang: zh
+    - name: English
+      link: /en/
+      lang: en
+
+nav:
+  - 主页: index.md
+  - WriteUP:
+    - WriteUP/CTFHUB之HTTP协议.md
+    - WriteUP/CTFHUB之信息泄露.md
+
+markdown_extensions:
+  - abbr
+  - attr_list
+  - admonition
+  - def_list
+  - footnotes
+  #- callouts
+  - md_in_html
+  - markdown.extensions.abbr  #[支持Markdown文件上方自定义标题标签等]
+  - pymdownx.magiclink
+  - pymdownx.caret
+  - pymdownx.betterem
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.snippets
+  - pymdownx.smartsymbols
+  - pymdownx.tilde
+
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format 
+  - pymdownx.arithmatex:  #[LaTeX支持]
+      generic: true
+  - toc:
+      permalink: true  #[固定标题位置为当前位置]
+  - pymdownx.highlight:  #[代码块高亮]
+      anchor_linenums: true
+      linenums: true  #[显示行号]
+      auto_title: true  #[显示编程语言名称]
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
