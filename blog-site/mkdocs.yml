@@ -51,4 +51,5 @@ theme:
 
 
   feature:
+    - announce.dismiss
     - navigation.instant #自动隐藏
