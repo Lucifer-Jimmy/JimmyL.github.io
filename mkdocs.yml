@@ -86,7 +86,7 @@ nav:
     - WriteUP/CTFHUB之HTTP协议.md
     - WriteUP/CTFHUB之信息泄露.md
     - WriteUP/CTFHUB之密码口令.md
-  - 日记:
+  - 日记: index.md
 
 markdown_extensions:
   - abbr
