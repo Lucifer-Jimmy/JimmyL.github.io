@@ -5,3 +5,10 @@ mkdocs-material
 mkdocs-awesome-pages-plugin  
 mkdocs-git-revision-date-localized-plugin
 pymdown-extensions
+jinja2
+jieba
+mkdocs-glightbox
+urllib3<2
+mkdocs-git-committers-plugin-2
+mkdocs-markdownextradata-plugin
+mkdocs-encryptcontent-plugin
