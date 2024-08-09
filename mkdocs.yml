@@ -86,8 +86,9 @@ nav:
     - WriteUP/CTFHUB之HTTP协议.md
     - WriteUP/CTFHUB之信息泄露.md
     - WriteUP/CTFHUB之密码口令.md
+    - 攻防世界之Web新手模式: WriteUP/攻防世界之Web新手模式.md
   - 日记: 
-    - Daily/2024-08-07.md
+    - 2024-08-07: Daily/2024-08-07.md
 
 markdown_extensions:
   - abbr
