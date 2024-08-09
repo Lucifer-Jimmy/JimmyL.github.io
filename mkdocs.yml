@@ -83,9 +83,9 @@ extra:
 nav:
   - 主页: index.md
   - WriteUP:
-    - WriteUP/CTFHUB之HTTP协议.md
-    - WriteUP/CTFHUB之信息泄露.md
-    - WriteUP/CTFHUB之密码口令.md
+    - CTFHub之HTTP协议: WriteUP/CTFHUB之HTTP协议.md
+    - CTFHub之信息泄露: WriteUP/CTFHUB之信息泄露.md
+    - CTFHub之密码口令: WriteUP/CTFHUB之密码口令.md
     - 攻防世界之Web新手模式: WriteUP/攻防世界之Web新手模式.md
   - 日记: 
     - 2024-08-07: Daily/2024-08-07.md

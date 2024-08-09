@@ -1,5 +1,4 @@
-# CTFHub之信息泄露
-## 1、目录遍历
+# 1、目录遍历
 ---
 - 说实话，第一次看见这道题有点懵，没想到真就那么简单......
 - 看了下别人的 WriteUP ，竟然还可以用 Python 跑程序来解，nb！
@@ -22,7 +21,7 @@ for i in range(0,5):
 			print(url_test)
 ```
 
-## 2、PHPINFO
+# 2、PHPINFO
 ---
 - 一道简单题，关键是留意其中反应的主机的一些信息。（如下）
 
@@ -38,9 +37,9 @@ for i in range(0,5):
 | **allow_url_include**     | **Off**                                                                                                                    |
 - 以及观察支持的协议和封装！
 
-## 3、备份文件下载
+# 3、备份文件下载
 ---
-### 3.1  网站源码
+## 3.1  网站源码
 - 惊心动魄，差点不够时间解了！
 - 首先，我以为 Flag 就在网站的备份文件中，所以第一步先要找到相应文件，但是一个个手动输入太麻烦了，再加上如果没有相应的文件网站会返回 **404** 的状态码，又联想到了上面的 python 代码，所以解法如下：
 ```python3
@@ -70,12 +69,12 @@ for i in range(0,6):
 - 所以，我看了看 50x.html 文件后又想到了这个是离线端，跟在线端应该是不一样的！我应该在网站去访问这些文件，最后找到了 Flag。
 >还可以用 dirsearch 工具对网站进行扫描。如： `python3 dirsearch.py -u http://xxx/ -e *`
 
-### 3.2  bak文件
+## 3.2  bak文件
 - 这道题也是一道关于备份文件的题，观察过后应该也是要获取它的备份文件。
 - 经过搜索，发现 `.bak` 文件是网站源代码的备份文件，于是就可以直接将网站的源代码备份文件直接下载下来，然后修改文件名后缀，将其改为正常的 `.php` 后，打开源代码即可获取 Flag。
 >也可以直接用命令 `curl http://xxx/index.php.bak`
 
-### 3.3  vim缓存
+## 3.3  vim缓存
 - 在使用 vim 时会创建临时缓存文件，关闭 vim 时缓存文件则会被删除。
 - 当 vim 异常退出后，因为没有处理缓存文件，导致可以通过缓存文件恢复原始文件内容。
 - 以 index.php 为例，第一次会产生 `.index.php.swp`，再次意外退出会产生 `.index.php.swo`，第三次意外退出会产生 `.index.php.swn` 文件。
@@ -83,7 +82,7 @@ for i in range(0,6):
 - 所以，解题第一步，先将 vim 生成的临时文件下载下来。
 - 使用命令 `vim -r index.php.swp` 来修复文件，就能看到 Flag 了。
 
-### 3.4  .DS_Store
+## 3.4  .DS_Store
 ---
 - .DS_Store 是 Mac OS 保存文件夹的自定义属性的隐藏文件，通过这个文件可以知道这个目录里面所有文件的清单。
 - 首先，在网站中下载上述文件。
@@ -91,9 +90,9 @@ for i in range(0,6):
 - 再尝试在 Windows 下用记事本打开，留意到了 `Flag is here.`，但没能细心观察到乱码中的“乱中有序”！
 - 根据“有序”的内容，在访问网站后，获得 Flag。
 
-## 4、Git 泄露
+# 4、Git 泄露
 ---
-### 4.1  Log
+## 4.1  Log
 - 我的评价是全是坑！！！
 - 首先，一定不要下载错工具，否则根本做不出来！！！
 - 下载的一定要是 **BugScanTeam 的 GitHack**！
@@ -101,7 +100,7 @@ for i in range(0,6):
 >还原后的文件在 `dist/` 目录下
 - 根据 `git log` 看到项目的修改，进行回滚即得 Flag。
 
-### 4.2  Stash
+## 4.2  Stash
 - 首先，我们需要了解 Git 中 stash 命令的作用以及使用方法。
 - 当你在项目的一部分上工作了一段时间后，所有东西都进入混乱的状态，而你想切换到其他分支去做一点事，且在当前工作空间所做的操作未能提交到版本库时，Git 是不允许这样做的。
 - 所以，我们用 `git stash` 命令来将当前工作状态储存起来，然后再切换到其他分支工作，工作完成后再回去取出。
@@ -119,11 +118,11 @@ for i in range(0,6):
 | `git stash branch {branchName} {stashName}` | 创建并切换到一个新分支来读取指定的存储<br>stashName：存储的名称，默认情况下读取 stash 堆栈中栈顶的存储 |
 - 本题，在使用 GitHack 后，进入到相应目录，执行 `git stash list` 命令，查看临时储存的内容，在用 `git stash apply stash@{0}` 将储存的内容提取出来（提交），即可在文件中获得 Flag！
 
-### 4.3  Index
+## 4.3  Index
 - 额，这个好像直接用 GitHack 将网站克隆下来就好了。
 - 或者直接在命令行使用 `git diff` 命令来查看项目的修改，即能得到 Flag。
 
-## 5、SVN 泄露
+# 5、SVN 泄露
 ---
 - 根据题目描述，在 [Github](https://github.com/kost/dvcs-ripper) 下载关于 SVN 泄露的漏洞利用工具 dvcs-ripper。
 - 然后，进入相应目录 `cd /home/lucifer/Tools/dvcs-ripper`。
@@ -140,7 +139,7 @@ sudo apt-get install perl libio-socket-ssl-perl libdbd-sqlite3-perl libclass-dbi
 - 提示说 Flag 在服务器旧版本的源代码上，所以应该检查一下 pristine 文件夹中的文件是否存放 Flag。
 - 查看两个文件，发现 Flag。
 
-### 5.1  技术细节（来自腾讯混元 AI）
+## 5.1  技术细节（来自腾讯混元 AI）
 - .svn 目录下的 pristine 文件夹存放的是工作副本中文件的原始副本。
 - 这些原始副本用于 Subversion 客户端在进行版本控制操作时参考，以确保文件的一致性和完整性。
 - 下面将详细分析 .svn/pristine 文件夹及相关内容：
@@ -178,7 +177,7 @@ sudo apt-get install perl libio-socket-ssl-perl libdbd-sqlite3-perl libclass-dbi
 
 综上所述，.svn/pristine 文件夹在 Subversion 版本控制系统中起着关键作用，负责存储工作副本中文件的原始副本。适当管理和清理这些文件可以有效优化工作副本的性能和空间占用。通过理解其工作原理和妥善运用相关工具，可以大幅提高版本控制的效率。
 
-## 6、HG 泄露
+# 6、HG 泄露
 ---
 - Mercurial 是一种轻量级分布式版本控制系统，采用 Python 语言实现，易于学习和使用，扩展性强。其是基于 GNU General Public License（GPL）授权的开源项目。
 - 在 Mercurial 中，本地既可以当做版本库的服务端，也可以当做版本库的客户端。
