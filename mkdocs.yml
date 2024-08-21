@@ -89,6 +89,8 @@ nav:
     - 攻防世界之Web新手模式: WriteUP/攻防世界之Web新手模式.md
     - NSSCTF之Web入门: WriteUP/NSSCTF之Web入门.md
     - CTF_show之菜狗杯: WriteUP/CTF_Show之菜狗杯.md
+    - CTFhub之SQL注入: WriteUP/CTFHUB之SQL注入.md
+    - 2024-BaseCTF-新生赛: WriteUP/BaseCTF_2024_新生赛.md
   - 日记: 
     - 2024-08-07: Daily/2024-08-07.md
 
@@ -126,9 +128,9 @@ markdown_extensions:
       anchor_linenums: true
       linenums: true  #[显示行号]
       auto_title: true  #[显示编程语言名称]
-  #- pymdownx.emoji:
-      #emoji_index: !!python/name:material.extensions.emoji.twemoji
-      #emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
