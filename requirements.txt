@@ -2,6 +2,7 @@ mkdocs
 mkdocs-bootswatch
 mkdocs-minify-plugin
 mkdocs-material
+mkdocs-material-extensions
 mkdocs-awesome-pages-plugin  
 mkdocs-git-revision-date-localized-plugin
 pymdown-extensions
