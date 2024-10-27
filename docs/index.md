@@ -4,6 +4,7 @@
 - 2024年10月2日 ~ 2024年10月30号 [SHCTF2024](https://shc.tf/games/1)
 
 ## 即将开始
+- 2024年10月29日 ~ 2024年10月30日 [第四届“网鼎杯”网络安全大赛](https://www.wangdingcup.com/)
 
 ## 已结束
 - 2024年10月19日 ~ 2024年10月20日 [第七届“强网”拟态国际防御精英挑战赛](https://challenge.xctf.org.cn/page/mg/login)
