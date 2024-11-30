@@ -115,8 +115,10 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.snippets
+  - pymdownx.superfences
   - pymdownx.smartsymbols
   - pymdownx.tilde
+  - mdx_truly_sane_lists
 
   - pymdownx.superfences:
       custom_fences:
