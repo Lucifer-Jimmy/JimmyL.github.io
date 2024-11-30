@@ -92,7 +92,9 @@ nav:
     - CTFhub之SQL注入: WriteUP/CTFHUB之SQL注入.md
     - 2024-BaseCTF-新生赛: WriteUP/BaseCTF_2024_新生赛.md
     - NSSCTF的WriteUP: WriteUP/NSSCTF的WriteUP.md
-  - 学习笔记: 
+  - Notes:
+    - Java反序列化学习: Notes/Java反序列化学习.md
+  - 学习日记: 
     - 2024-08-07: Daily/2024-08-07.md
 
 markdown_extensions:
