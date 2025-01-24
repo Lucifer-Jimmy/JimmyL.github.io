@@ -668,7 +668,8 @@ public class UnserTest {
         <groupId>commons-collections</groupId>  
         <artifactId>commons-collections</artifactId>  
         <version>3.2.1</version>  
-    </dependency></dependencies>
+    </dependency>
+</dependencies>
 ```
 ### 漏洞点
 ```Java
