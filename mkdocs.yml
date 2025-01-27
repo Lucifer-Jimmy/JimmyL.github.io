@@ -97,49 +97,56 @@ nav:
   - 学习日记: 
     - 2024-08-07: Daily/2024-08-07.md
 
+# Extensions
 markdown_extensions:
   - abbr
-  - attr_list
   - admonition
+  - attr_list
   - def_list
   - footnotes
-  #- callouts
   - md_in_html
-  - markdown.extensions.abbr  #[支持Markdown文件上方自定义标题标签等]
-  - pymdownx.magiclink
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
   - pymdownx.caret
-  - pymdownx.betterem
-  - pymdownx.critic
   - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.keys
+  - pymdownx.magiclink:
+      normalize_issue_symbols: true
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
   - pymdownx.mark
-  - pymdownx.snippets
-  - pymdownx.superfences
   - pymdownx.smartsymbols
-  - pymdownx.tilde
-  - mdx_truly_sane_lists
-
+  - pymdownx.snippets:
+      auto_append:
+        - includes/mkdocs.md
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format 
-  - pymdownx.arithmatex:  #[LaTeX支持]
-      generic: true
-  - toc:
-      permalink: true  #[固定标题位置为当前位置]
-  - pymdownx.highlight:  #[代码块高亮]
-      anchor_linenums: true
-      linenums: true  #[显示行号]
-      auto_title: true  #[显示编程语言名称]
-  - pymdownx.emoji:
-      emoji_index: !!python/name:pymdownx.emoji.twemoji
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.tilde
+
 
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
