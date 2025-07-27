@@ -1,0 +1,16 @@
+# - nickname: 标题
+#   avatar: 头像
+#   url: 站点
+#   description: 描述 &#10 表示换行
+- nickname: 晨曦
+  avatar: /friendslogo/chenxi.jpg
+  url: https://chenxi9981.github.io/
+  description: Web 神！！！
+- nickname: Xrntkk
+  avatar: /friendslogo/xrntkk.jpg
+  url: https://blog.xrntkk.top/
+  description: Web 大手子！！！
+- nickname: 2hi5hu
+  avatar: /friendslogo/2hi5hu.jpg
+  url: https://2hi5hu.cn/
+  description: Misc 大手子！！！

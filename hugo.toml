@@ -28,6 +28,30 @@ enableEmoji = true
 
 [menu]
   [[menu.main]]
+    identifier = "home"
+    parent = ""
+    # you can add extra information before the name (HTML format is supported), such as icons
+    pre = ""
+    # you can add extra information after the name (HTML format is supported), such as icons
+    post = ""
+    name = "首页"
+    url = "/zh-cn/"
+    # title will be shown when you hover on this menu link
+    title = ""
+    weight = 1
+    # FixIt 0.2.14 | NEW add user-defined content to menu items
+    [menu.main.params]
+      # add css class to a specific menu item
+      class = ""
+      # whether set as a draft menu item whose function is similar to a draft post/page
+      draft = false
+      # FixIt 0.2.16 | NEW add fontawesome icon to a specific menu item
+      icon = "fa-solid fa-home"
+      # FixIt 0.2.16 | NEW set menu item type, optional values: ["mobile", "desktop"]
+      type = ""
+      # FixIt 0.3.9 | NEW whether to show the submenu item divider line
+      divided = false
+  [[menu.main]]
     identifier = "archives"
     parent = ""
     # you can add extra information before the name (HTML format is supported), such as icons
@@ -38,7 +62,7 @@ enableEmoji = true
     url = "/archives/"
     # title will be shown when you hover on this menu link
     title = ""
-    weight = 1
+    weight = 2
     # FixIt 0.2.14 | NEW add user-defined content to menu items
     [menu.main.params]
       # add css class to a specific menu item
@@ -59,7 +83,7 @@ enableEmoji = true
     name = "分类"
     url = "/categories/"
     title = ""
-    weight = 2
+    weight = 3
     [menu.main.params]
       icon = "fa-solid fa-folder-tree"
   [[menu.main]]
@@ -70,7 +94,7 @@ enableEmoji = true
     name = "标签"
     url = "/tags/"
     title = ""
-    weight = 3
+    weight = 4
     [menu.main.params]
       icon = "fa-solid fa-tags"
   [[menu.main]]
@@ -81,43 +105,48 @@ enableEmoji = true
     name = "友人"
     url = "/friends/"
     title = ""
-    weight = 4
+    weight = 5
     [menu.main.params]
       icon = "fa-solid fa-coffee"
 
-# [related]
-#   includeNewer = false
-#   threshold = 80
-#   toLower = false
-# [[related.indices]]
-#   applyFilter = false
-#   cardinalityThreshold = 0
-#   name = 'keywords'
-#   pattern = ''
-#   toLower = false
-#   type = 'basic'
-#   weight = 100
-# [[related.indices]]
-#   applyFilter = false
-#   cardinalityThreshold = 0
-#   name = 'date'
-#   pattern = ''
-#   toLower = false
-#   type = 'basic'
-#   weight = 10
-# [[related.indices]]
-#   applyFilter = false
-#   cardinalityThreshold = 0
-#   name = 'tags'
-#   pattern = ''
-#   toLower = false
-#   type = 'basic'
-#   weight = 80
-# [[related.indices]]
-#   applyFilter = false
-#   name = 'fragmentrefs'
-#   type = 'fragments'
-#   weight = 80
+[[redirects]]
+  from = '/**'
+  status = 404
+  to = '/zh-cn/404.html'
+
+[related]
+  includeNewer = false
+  threshold = 80
+  toLower = false
+[[related.indices]]
+  applyFilter = false
+  cardinalityThreshold = 0
+  name = 'keywords'
+  pattern = ''
+  toLower = false
+  type = 'basic'
+  weight = 100
+[[related.indices]]
+  applyFilter = false
+  cardinalityThreshold = 0
+  name = 'date'
+  pattern = ''
+  toLower = false
+  type = 'basic'
+  weight = 10
+[[related.indices]]
+  applyFilter = false
+  cardinalityThreshold = 0
+  name = 'tags'
+  pattern = ''
+  toLower = false
+  type = 'basic'
+  weight = 80
+[[related.indices]]
+  applyFilter = false
+  name = 'fragmentrefs'
+  type = 'fragments'
+  weight = 80
 
 [module]
   [module.hugoVersion]
@@ -374,7 +403,7 @@ enableEmoji = true
       # Gravatar Email for preferred avatar in home page
       gravatarEmail = ""
       # URL of avatar shown in home page
-      avatarURL = "../avatar.jpg"
+      avatarURL = "/avatar.jpg"
       # FixIt 0.2.17 | NEW identifier of avatar menu link
       avatarMenu = ""
       # title shown in home page (HTML format is supported)
@@ -391,7 +420,7 @@ enableEmoji = true
     [params.home.posts]
       enable = true
       # special amount of posts in each home posts page
-      paginate = 2
+      paginate = 3
 
   # FixIt 0.2.16 | CHANGED Social config about the author
   [params.social]
@@ -673,14 +702,14 @@ enableEmoji = true
 
   # FixIt 0.2.16 | NEW Reading progress bar
   [params.readingProgress]
-    enable = false
+    enable = true
     # Available values: ["left", "right"]
     start = "left"
     # Available values: ["top", "bottom"]
     position = "top"
     reversed = false
-    light = ""
-    dark = ""
+    light = "#000000"
+    dark = "#656ef6"
     height = "2px"
   
   # FixIt 0.2.17 | NEW Progress bar in the top during page loading.
@@ -930,9 +959,9 @@ enableEmoji = true
       # whether to show the copy button of the code wrapper
       copy = true
       # FixIt 0.2.13 | NEW whether to show the edit button of the code wrapper
-      edit = true
+      edit = false
       # the maximum number of lines of displayed code by default
-      maxShownLines = 10
+      maxShownLines = 50
     # Mapbox GL JS config (https://docs.mapbox.com/mapbox-gl-js)
     [params.page.mapbox]
       # access token of Mapbox GL JS
@@ -972,8 +1001,8 @@ enableEmoji = true
     # social share links in post page
     [params.page.share]
       enable = true
-      Twitter = true
-      Facebook = true
+      Twitter = false
+      Facebook = false
       Linkedin = false
       Whatsapp = false
       Pinterest = false
@@ -990,7 +1019,7 @@ enableEmoji = true
       Weibo = true
       Myspace = false
       Blogger = false
-      Baidu = false
+      Baidu = true
       Odnoklassniki = false
       Evernote = false
       Skype = false
