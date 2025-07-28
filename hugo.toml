@@ -1,4 +1,5 @@
 baseURL = 'https://blog.luc1f3r.top/'
+title = "Luc1f3r's Blog"
 
 theme = 'FixIt'
 
@@ -37,7 +38,7 @@ enableEmoji = true
     name = "首页"
     url = "/zh-cn/"
     # title will be shown when you hover on this menu link
-    title = ""
+    title = "Luc1f3r's Blog"
     weight = 1
     # FixIt 0.2.14 | NEW add user-defined content to menu items
     [menu.main.params]
@@ -157,9 +158,9 @@ enableEmoji = true
   # FixIt 0.2.15 | CHANGED FixIt theme version
   version = "0.3.0" # e.g. "0.2.X", "0.2.15", "v0.2.15" etc.
   # site description
-  description = ""
+  description = "Luc1f3r's Blog"
   # site keywords
-  keywords = []
+  keywords = ['Blog','Luc1f3r']
   # site default theme ["light", "dark", "auto"]
   defaultTheme = "dark"
   # which hash function used for SRI, when empty, no SRI is used
@@ -1032,7 +1033,7 @@ enableEmoji = true
       Mix = false
     # FixIt 0.2.15 | CHANGED Comment config
     [params.page.comment]
-      enable = false
+      enable = true
       # FixIt 0.2.13 | NEW Artalk comment config (https://artalk.js.org/)
       [params.page.comment.artalk]
         enable = false
