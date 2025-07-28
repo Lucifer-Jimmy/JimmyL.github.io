@@ -420,7 +420,7 @@ enableEmoji = true
     [params.home.posts]
       enable = true
       # special amount of posts in each home posts page
-      paginate = 3
+      paginate = 5
 
   # FixIt 0.2.16 | CHANGED Social config about the author
   [params.social]
@@ -709,8 +709,8 @@ enableEmoji = true
     position = "top"
     reversed = false
     light = "#000000"
-    dark = "#656ef6"
-    height = "2px"
+    dark = "#2674fd"
+    height = "2.5px"
   
   # FixIt 0.2.17 | NEW Progress bar in the top during page loading.
   # For more information: https://github.com/CodeByZach/pace
@@ -836,7 +836,7 @@ enableEmoji = true
     # FixIt 0.2.18 | CHANGED whether to enable lightgallery
     # set to true, images in the content will be shown as the gallery if the image has a title, e.g. ![alt](src "title")
     # set to "force", images in the content will be forced to shown as the gallery regardless of the image has a title or not, e.g. ![alt](src)
-    lightgallery = false
+    lightgallery = "force"
     # whether to enable the ruby extended syntax
     ruby = true
     # whether to enable the fraction extended syntax
@@ -872,6 +872,11 @@ enableEmoji = true
     collectionList = false
     # FixIt 0.3.0 | NEW whether to enable collection navigation at the end of the post
     collectionNavigation = false
+
+    [params.lightgallery]
+      download = false
+      thumbnail = false
+      showThumbByDefault = false
 
     # FixIt 0.2.15 | NEW Repost config
     [params.page.repost]
@@ -961,7 +966,7 @@ enableEmoji = true
       # FixIt 0.2.13 | NEW whether to show the edit button of the code wrapper
       edit = false
       # the maximum number of lines of displayed code by default
-      maxShownLines = 50
+      maxShownLines = 100
     # Mapbox GL JS config (https://docs.mapbox.com/mapbox-gl-js)
     [params.page.mapbox]
       # access token of Mapbox GL JS
