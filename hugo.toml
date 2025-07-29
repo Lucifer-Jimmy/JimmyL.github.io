@@ -1158,10 +1158,10 @@ enableEmoji = true
       # FixIt 0.2.14 | NEW Giscus comments config
       [params.page.comment.giscus]
         enable = true
-        repo = "JimmyL.github.io"
-        repoId = "R_kgDOPSlTHQ"
-        category = "Comments"
-        categoryId = "DIC_kwDOPSlTHc4CtgT1"
+        repo = "Lucifer-Jimmy/Blog-Comments"
+        repoId = "R_kgDOPUbCdA"
+        category = "General"
+        categoryId = "DIC_kwDOPUbCdM4CthOl"
         mapping = ""
         origin = "https://giscus.app" # FixIt NEW | 0.3.7 Or set it to your self-hosted domain
         strict = "0" # FixIt NEW | 0.2.18
