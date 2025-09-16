@@ -1,5 +1,6 @@
 +++
 date = '2025-07-28T19:23:12+08:00'
+lastmod = '2025-07-28T19:23:12+08:00'
 draft = false
 title = 'SHCTF 2024 WriteUP'
 categories = ['WriteUP']
