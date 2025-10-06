@@ -4,7 +4,7 @@ lastmod = '2025-09-24T10:09:00+08:00'
 draft = false
 title = 'CTF@AC - Quals WriteUP'
 categories = ['WriteUP']
-tags = ['WriteUP', 'CTF@AC']
+tags = ['WriteUP', 'CTF@AC', '2025']
 
 +++
 
