@@ -468,7 +468,7 @@ enableEmoji = true
     Strava = ""
     Skype = ""
     Whatsapp = ""
-    Zhihu = "lucifer.hell"
+    Zhihu = ""
     Douban = ""
     Angellist = ""
     Slidershare = ""
@@ -492,7 +492,7 @@ enableEmoji = true
     Ko-Fi = ""
     BuyMeaCoffee = ""
     Linktree = ""
-    QQ = ""
+    QQ = "1373238933"
     QQGroup = "" # https://qun.qq.com/join.html
     Diaspora = ""
     CSDN = ""
@@ -512,7 +512,7 @@ enableEmoji = true
     Credly = ""
     Bluesky = ""
     Phone = ""
-    Email = "lucifer.stars@qq.com"
+    Email = "jimmyliang4749@gmail.com"
     RSS = true
     # custom social links like the following
     # [params.social.twitter]
