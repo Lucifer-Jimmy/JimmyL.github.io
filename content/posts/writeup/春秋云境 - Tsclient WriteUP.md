@@ -340,7 +340,7 @@ bloodhound
 
 然后我们根据收集到的信息，考虑接下来要进行提权。  
 
-![](bowuchulingPic1.png)
+![](../assets/bowuchulingPic1.png)
 
 然后根据之前的共享文件夹中的提示 `Do you know how to hijack Image?`，我们可以知道是打 `IFEO` 映像劫持利用，也被称为重定向劫持，具体方法是通过修改注册表更改一些系统辅助功能绑定的应用程序，从而提权。  
 
