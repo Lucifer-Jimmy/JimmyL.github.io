@@ -1,0 +1,32 @@
+[data-theme="dark"] {
+  --global-bg-color: #252627 !important;
+  --header-bg-color: #121212 !important;
+
+  /* 默认状态, 偏灰的颜色 (Chrome, Edge, Safari) */
+  ::-webkit-scrollbar-thumb {
+    background-color: #717175 !important;
+  }
+
+  /* 鼠标悬停, 更偏亮的颜色 (Chrome, Edge, Safari) */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #999999 !important;
+  }
+
+  /* 针对 Firefox 浏览器的基础兼容*/
+  * {
+    scrollbar-color: #717175 transparent !important; 
+  }
+
+  body {
+    color: #e2e2e2;
+    background-color: var(--global-bg-color) !important;
+  }
+
+  .header-wrapper {
+    background-color: var(--header-bg-color) !important;
+  }
+
+  .single .content code, .single .content [data-theme='dark'] code, [data-theme='dark'] .toc .toc-content code, .toc .toc-content [data-theme='dark'] code {
+    color: #d4d4d4;
+  }
+}
