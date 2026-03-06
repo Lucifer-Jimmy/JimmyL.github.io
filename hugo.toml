@@ -223,7 +223,7 @@ enableEmoji = true
     # FixIt 0.2.12 | CHANGED Android browser theme color
     [params.app.themeColor]
       light = "#f8f8f8"
-      dark = "#252627"
+      dark = "#000000"
 
   # Search config
   [params.search]
