@@ -12,7 +12,7 @@
     background-color: #999999 !important;
   }
 
-  /* 针对 Firefox 浏览器的基础兼容*/
+  /* 针对 Firefox 浏览器的基础兼容 */
   * {
     scrollbar-color: #717175 transparent !important; 
   }
@@ -29,4 +29,24 @@
   .single .content code, .single .content [data-theme='dark'] code, [data-theme='dark'] .toc .toc-content code, .toc .toc-content [data-theme='dark'] code {
     color: #d4d4d4;
   }
+}
+
+/* 1. 彻底隐藏底部的缩略图容器 */
+.lg-outer .lg-thumb-outer {
+  display: none !important;
+}
+
+.lg-components {
+  display: none !important;
+}
+
+/* 2. 清除为缩略图预留的底部空间，让主图片重新垂直居中 */
+.lg-outer .lg-inner {
+  padding-bottom: 0 !important;
+  bottom: 0 !important;
+}
+
+/* 3. 确保顶部工具栏或进度条的位置不受影响 */
+.lg-outer .lg-components {
+  margin-bottom: 0 !important;
 }
