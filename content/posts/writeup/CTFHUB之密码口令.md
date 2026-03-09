@@ -1,5 +1,6 @@
 +++
 date = '2025-07-28T08:30:00+08:00'
+lastmod = '2025-07-28T08:30:00+08:00'
 draft = false
 title = 'CTFHub之密码口令'
 categories = ['WriteUP']

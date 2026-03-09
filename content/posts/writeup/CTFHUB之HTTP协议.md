@@ -1,5 +1,6 @@
 +++
 date = '2025-07-27T23:20:00+08:00'
+lastmod = '2025-07-27T23:20:00+08:00'
 draft = false
 title = 'CTFHub之HTTP协议'
 categories = ['WriteUP']

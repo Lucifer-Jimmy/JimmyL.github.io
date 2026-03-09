@@ -1,5 +1,6 @@
 +++
 date = '2025-07-28T00:26:00+08:00'
+lastmod = '2025-07-28T00:26:00+08:00'
 draft = false
 title = 'CTFHub之信息泄露'
 categories = ['WriteUP']

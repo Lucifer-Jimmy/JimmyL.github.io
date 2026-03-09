@@ -1,5 +1,6 @@
 +++
 date = '2025-07-28T16:48:12+08:00'
+lastmod = '2025-07-28T16:48:12+08:00'
 draft = false
 title = 'CTFHub之SQL注入'
 categories = ['WriteUP']

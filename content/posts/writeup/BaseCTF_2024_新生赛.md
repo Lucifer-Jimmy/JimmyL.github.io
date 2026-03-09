@@ -1,5 +1,6 @@
 +++
 date = '2025-07-27T22:00:00+08:00'
+lastmod = '2025-07-27T22:00:00+08:00'
 draft = false
 title = 'BaseCTF 2024 新生赛'
 categories = ['WriteUP']

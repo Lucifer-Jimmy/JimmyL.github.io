@@ -1,5 +1,6 @@
 +++
 date = '2025-07-28T17:10:00+08:00'
+lastmod = '2025-07-28T17:10:00+08:00'
 draft = false
 title = 'NSSCTF的部分题目WriteUP'
 categories = ['WriteUP']
