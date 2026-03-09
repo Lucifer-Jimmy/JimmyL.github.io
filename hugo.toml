@@ -15,9 +15,12 @@ timeZone = "Asia/Shanghai"
 # 是否使用 robots.txt
 enableRobotsTXT = true
 # 是否使用 git 信息
-enableGitInfo = true
+enableGitInfo = false
 # 是否使用 emoji 代码
 enableEmoji = true
+
+[frontmatter]
+  lastmod = ["lastmod", ":fileModTime", ":default"]
 
 # 继承 FixIt 主题的以下配置
 [markup]
@@ -386,7 +389,7 @@ enableEmoji = true
     section = true
     list = true
     days = 30
-    maxCount = 10
+    maxCount = 6
 
   # FixIt 0.2.17 | NEW TagCloud config for tags page
   [params.tagcloud]
