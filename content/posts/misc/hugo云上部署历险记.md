@@ -1,5 +1,6 @@
 +++
 date = '2025-07-29T19:59:04+08:00'
+lastmod = '2025-07-29T19:59:04+08:00'
 draft = false
 title = 'Hugo 云上部署历险记'
 categories = ['杂谈']

@@ -1,5 +1,6 @@
 +++
 date = '2025-07-28T17:28:43+08:00'
+lastmod = '2025-07-28T17:28:43+08:00'
 draft = false
 title = 'Java反序列化学习'
 categories = ['Web', 'Java']

