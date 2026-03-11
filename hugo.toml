@@ -234,7 +234,7 @@ enableEmoji = true
     # type of search engine ["algolia", "fuse", "cse", "post-chat"]
     type = "fuse"
     # max index length of the chunked content
-    contentLength = 4000
+    contentLength = 40000
     # placeholder of the search bar
     placeholder = ""
     # max number of results length
@@ -255,9 +255,9 @@ enableEmoji = true
       minMatchCharLength = 2
       findAllMatches = false
       location = 0
-      threshold = 0.3
+      threshold = 0.4
       distance = 100
-      ignoreLocation = false
+      ignoreLocation = true
       useExtendedSearch = true
       ignoreFieldNorm = false
 

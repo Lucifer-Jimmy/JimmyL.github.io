@@ -512,7 +512,7 @@ proxychains4 impacket-psexec -k -no-pass Administrator@XR-0687.xiaorang.lab -dc-
 flag03: flag{57670c9d-f2ed-4445-9262-3479de531169}
 ```
 
-## flag04
+## flag 4
 
 根据之前的扫描结果，还有个 18 的靶机存在漏洞，可以进行攻击。
 
