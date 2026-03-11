@@ -198,7 +198,7 @@ enableEmoji = true
     name = "Luc1f3r"
     email = "lucifer.stars@qq.com"
     link = ""
-    avatar = "/avatar.jpg"
+    avatar = "/avatar.png"
 
   # FixIt 0.3.0 | NEW public Git repository information only then enableGitInfo is true
   [params.gitInfo]
