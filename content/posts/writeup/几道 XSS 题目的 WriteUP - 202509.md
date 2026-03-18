@@ -3,7 +3,7 @@ date = '2026-03-18T21:00:00+08:00'
 lastmod = '2026-03-18T21:05:00+08:00'
 draft = false
 title = '几道 XSS 题目的 WriteUP'
-categories = ['WriteUP', 'Web']
+categories = ['WriteUP', 'Web', 'Nodejs']
 tags = ['WriteUP', 'Web', 'Nodejs']
 
 +++
