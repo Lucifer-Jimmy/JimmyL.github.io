@@ -234,7 +234,7 @@ enableEmoji = true
     # type of search engine ["algolia", "fuse", "cse", "post-chat"]
     type = "fuse"
     # max index length of the chunked content
-    contentLength = 40000
+    contentLength = 800000
     # placeholder of the search bar
     placeholder = ""
     # max number of results length
@@ -836,7 +836,7 @@ enableEmoji = true
     # FixIt 0.3.10 | NEW whether to hide a page from RSS, Atom and JSON feed
     hiddenFromFeed = false
     # whether to enable twemoji
-    twemoji = false
+    twemoji = true
     # FixIt 0.2.18 | CHANGED whether to enable lightgallery
     # set to true, images in the content will be shown as the gallery if the image has a title, e.g. ![alt](src "title")
     # set to "force", images in the content will be forced to shown as the gallery regardless of the image has a title or not, e.g. ![alt](src)
@@ -850,20 +850,20 @@ enableEmoji = true
     # license info (HTML format is supported)
     license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>'
     # whether to show link to Raw Markdown content of the post
-    linkToMarkdown = true
+    linkToMarkdown = false
     # FixIt 0.3.0 | NEW whether to show link to view source code of the post
     linkToSource = true
     # FixIt 0.3.0 | NEW whether to show link to edit the post
-    linkToEdit = true
+    linkToEdit = false
     # FixIt 0.3.0 | NEW whether to show link to report issue for the post
     linkToReport = true
     # FixIt 0.3.20 | NEW whether to show link to view the post in VSCode
-    linkToVscode = true
+    linkToVscode = false
     # FixIt 0.3.10 | CHANGED Page style ["narrow", "normal", "wide", ...]
     pageStyle = "normal"
     # FixIt 0.2.17 | CHANGED Auto Bookmark Support
     # If true, save the reading progress when closing the page.
-    autoBookmark = false
+    autoBookmark = true
     # FixIt 0.2.17 | NEW whether to enable wordCount
     wordCount = true
     # FixIt 0.2.17 | NEW whether to enable readingTime
@@ -871,7 +871,7 @@ enableEmoji = true
     # FixIt 0.2.17 | NEW end of post flag
     endFlag = ""
     # FixIt 0.2.18 | NEW whether to enable instant.page
-    instantPage = false
+    instantPage = true
     # FixIt 0.3.0 | NEW whether to enable collection list at the sidebar
     collectionList = false
     # FixIt 0.3.0 | NEW whether to enable collection navigation at the end of the post

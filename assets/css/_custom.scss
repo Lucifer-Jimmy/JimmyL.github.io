@@ -18,7 +18,7 @@
   }
 
   body {
-    color: #e2e2e2;
+    color: #dfdfdf;
     background-color: var(--global-bg-color) !important;
   }
 
@@ -49,4 +49,50 @@
 /* 3. 确保顶部工具栏或进度条的位置不受影响 */
 .lg-outer .lg-components {
   margin-bottom: 0 !important;
+}
+
+.single .content p,
+.single .content ul,
+.single .content ol,
+.single .content blockquote,
+.single .content .highlight,
+.single .content pre {
+  margin-bottom: 1.3rem;
+}
+
+div.chroma[data-init="true"] {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+div.chroma[data-init="true"] > .code-header {
+  position: relative;
+  z-index: 2;
+}
+
+div.chroma[data-init="true"] > .table-wrapper {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-2px);
+  transition:
+    max-height 0.26s cubic-bezier(0.22, 0.61, 0.36, 1),
+    opacity 0.18s ease,
+    transform 0.18s ease;
+  will-change: max-height, opacity, transform;
+}
+
+div.chroma[data-init="true"].open > .table-wrapper {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+div.chroma[data-init="true"] .code-header .arrow {
+  display: inline-flex;
+  transition: transform 0.24s cubic-bezier(0.22, 0.61, 0.36, 1);
+  transform-origin: center;
+}
+
+div.chroma[data-init="true"].open .code-header .arrow {
+  transform: rotate(90deg);
 }

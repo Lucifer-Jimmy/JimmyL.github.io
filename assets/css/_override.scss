@@ -1,0 +1,11 @@
+// 中文正文：思源宋体
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap');
+
+// 代码字体：JetBrains Mono
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+// 全局正文字体
+$global-font-family: 'Noto Serif SC', serif;
+
+// 代码字体
+$code-font-family: 'JetBrains Mono', monospace;
