@@ -1,3 +1,4 @@
+/* 针对黑暗模式下的优化 */
 [data-theme="dark"] {
   --global-bg-color: #252627 !important;
   --header-bg-color: #121212 !important;
@@ -31,6 +32,7 @@
   }
 }
 
+/* 针对图片预览的优化 */
 /* 1. 彻底隐藏底部的缩略图容器 */
 .lg-outer .lg-thumb-outer {
   display: none !important;
@@ -51,6 +53,7 @@
   margin-bottom: 0 !important;
 }
 
+/* 针对段落间距的优化 */
 .single .content p,
 .single .content ul,
 .single .content ol,
